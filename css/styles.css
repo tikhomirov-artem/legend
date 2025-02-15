@@ -64,6 +64,11 @@ button {
     max-width: fit-content;
     text-wrap: nowrap;
     background-color: transparent;
+    transition:
+        0.3s background,
+        0.3s border,
+        0.3s color,
+        0.3s box-shadow;
 }
 .page-button {
     padding: 17px 37px;
@@ -72,10 +77,22 @@ button {
 }
 .white-button {
     background-color: white;
+    border: 1px solid transparent;
+}
+.white-button:hover {
+    background-color: transparent;
+    border: 1px solid currentColor;
+    color: white;
 }
 .unfilled-button {
     color: black;
     border: 1px solid currentColor;
+}
+.unfilled-button:hover {
+    background-color: white;
+    border: 1px solid transparent;
+    color: black !important;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 .main-bg {
     background-image: url("../images/background-main.jpg");
@@ -93,13 +110,31 @@ button {
 .header__nav_list {
     column-gap: 26px;
 }
+.header__nav_item {
+    position: relative;
+    overflow-x: hidden;
+}
+.header__nav_item a:hover::after {
+    transform: translateX(0);
+}
+.header__nav_item a::after {
+    content: "";
+    transform: translateX(-100%);
+    transition: 0.3s transform;
+    position: absolute;
+    top: 90%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: white;
+}
 .header__logo {
     font-family: "Tenor Sans", sans-serif;
     font-size: 20px;
 }
 /*welcome*/
 .welcome__content {
-    min-height: 85vh;
+    min-height: 90vh;
 }
 .welcome__content_block {
     height: 100%;
@@ -137,6 +172,11 @@ button {
     margin-bottom: 1.4em;
     font-size: 10px;
 }
+.features__circles {
+    position: relative;
+    max-width: 140px;
+    width: 100%;
+}
 .feature__circle {
     height: 50px;
     width: 50px;
@@ -146,21 +186,21 @@ button {
     background-position: center;
 }
 .feature__circle:not(:first-child) {
-    position: relative;
+    position: absolute;
 }
 .feature__circle:nth-child(1) {
     background-image: url("../images/ellipses/ellipse_1.jpg");
 }
 .feature__circle:nth-child(2) {
-    left: -17px;
+    left: 30px;
     background-image: url("../images/ellipses/ellipse_2.jpg");
 }
 .feature__circle:nth-child(3) {
-    left: -34px;
+    left: 60px;
     background-image: url("../images/ellipses/ellipse_3.jpg");
 }
 .feature__circle:nth-child(4) {
-    left: -51px;
+    left: 90px;
     background-image: url("../images/ellipses/ellipse_4.jpg");
 }
 .features__img {
@@ -250,14 +290,21 @@ button {
 .catalog__product .unfilled-button {
     color: white;
 }
+/*legendarity*/
 .legendarity {
     padding-bottom: 0;
+    background-image: url("../images/cities.jpg"), linear-gradient(white, transparent);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .legendarity__info {
     color: black;
     row-gap: 93px;
+    max-width: 548px;
+    flex-grow: 1;
+    padding-bottom: 50px;
 }
-.legendarity__title {
+.legendarity__info_top .legendarity__title {
     max-width: 377px;
 }
 .legendarity__text {
@@ -265,5 +312,21 @@ button {
     margin-bottom: 15px;
 }
 .legendarity__info_features .legendarity__title {
-    color: #4B4949;
+    color: #4b4949;
+    line-height: 1;
+    max-width: 375px;
+}
+.legendarity__info_features {
+    column-gap: 20px;
+}
+.legendarity__img {
+    margin-right: 50px;
+    max-width: 308px;
+    align-self: flex-end;
+    max-height: 371px;
+}
+/*footer*/
+footer {
+    margin-top: 80px;
+    padding-bottom: 30px;
 }
