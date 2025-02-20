@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/fonts.css">
     <link rel="stylesheet" href="./css/styles.css">
+    <script defer src="./js/modals.js"></script>
     <title>Легенда - Жилой комплекс</title>
 </head>
+
 <body>
     <main>
         <div class="main-bg">
@@ -203,7 +205,31 @@
             </ul>
         </nav>
     </footer>
+    <dialog class="order-modal" id="order-modal">
+        <form id="order-modal-form" method="dialog" action="/" class="order-modal__content">
+            <h2>Оставьте заявку</h2>
+            <div class="order-modal__inputs">
+                <label for="">
+                    <span>Ваше имя</span>
+                    <input class="order-modal__input" type="text" placeholder="Имя">
+                </label>
+                <label for="">
+                    <span>Ваш email</span>
+                    <input class="order-modal__input" type="text" placeholder="Имя">
+                </label>
+            </div>
+            <button class="order-modal-button page-button unfilled-button">оставить заявку</button>
+        </form>
+
+
+    </dialog>
+    <dialog class="order-modal" id="order-modal-o" aria-modal="true">
+        sas
+
+
+    </dialog>
 
 </body>
+
 
 </html>
