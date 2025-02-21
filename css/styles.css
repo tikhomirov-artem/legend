@@ -336,7 +336,6 @@ footer {
     padding-bottom: 30px;
 }
 .order-modal {
-    display: block;
     padding: 0;
     border: none;
     opacity: 0;
@@ -374,4 +373,10 @@ footer {
     border-radius: 6px;
     max-width: 100%;
     font-size: 14px;
+}
+#order-modal-success h2 {
+    text-align: center;
+}
+#order-modal-success .order-modal__content {
+    width: 350px;
 }

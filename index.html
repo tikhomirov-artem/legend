@@ -18,14 +18,14 @@
                 <header class="header">
                     <nav class="container d-flex j-content-between">
                         <ul class="header__nav_list d-flex">
-                            <li class="header__nav_item"><a href="">кто мы</a></li>
+                            <li class="header__nav_item"><a href="#sas">кто мы</a></li>
                             <li class="header__nav_item"><a href="">каталог</a></li>
                         </ul>
                         <span class="header__logo">
                             ЛЕГЕНДА
                         </span>
                         <ul class="header__nav_list d-flex">
-                            <li class="header__nav_item"><a href="">оставьте заявку</a></li>
+                            <li class="header__nav_item"><a href="#" class="order-trigger">оставьте заявку</a></li>
                         </ul>
                     </nav>
                 </header>
@@ -206,30 +206,27 @@
         </nav>
     </footer>
     <dialog class="order-modal" id="order-modal">
-        <form id="order-modal-form" method="dialog" action="/" class="order-modal__content">
+        <form id="order-modal-form" method="dialog" action="/" class="order-modal__content order-modal-form__content">
             <h2>Оставьте заявку</h2>
             <div class="order-modal__inputs">
                 <label for="">
                     <span>Ваше имя</span>
-                    <input class="order-modal__input" type="text" placeholder="Имя">
+                    <input class="order-modal__input" type="text" placeholder="Иван">
                 </label>
                 <label for="">
                     <span>Ваш email</span>
-                    <input class="order-modal__input" type="text" placeholder="Имя">
+                    <input class="order-modal__input" type="text" placeholder="email@domain.com">
                 </label>
             </div>
             <button class="order-modal-button page-button unfilled-button">оставить заявку</button>
         </form>
-
-
     </dialog>
-    <dialog class="order-modal" id="order-modal-o" aria-modal="true">
-        sas
-
-
+    <dialog class="order-modal" id="order-modal-success">
+        <form method="dialog" class="order-modal-success__content order-modal__content">
+            <h2>Успешно!</h2>
+            <button class="order-modal-button page-button unfilled-button">принять</button>
+        </form>
     </dialog>
-
 </body>
-
 
 </html>
