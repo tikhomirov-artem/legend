@@ -3,12 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/fonts.css">
     <link rel="stylesheet" href="./css/styles.css">
     <script defer src="./js/modals.js"></script>
-    <title>Легенда - Жилой комплекс</title>
+    <script defer src="./js/counterEffect.js"></script>
+    <title>Легенда - Жилой комплекс: выбрать квартиру в элитном ЖК</title>
 </head>
 
 <body>
@@ -17,9 +19,12 @@
             <section class="welcome">
                 <header class="header">
                     <nav class="container d-flex j-content-between">
+                        <div class="header-mobile__logo">
+                            <img height="35" width="35" src="images/logo.svg" alt="Лого">
+                        </div>
                         <ul class="header__nav_list d-flex">
-                            <li class="header__nav_item"><a href="#sas">кто мы</a></li>
-                            <li class="header__nav_item"><a href="">каталог</a></li>
+                            <li class="header__nav_item"><a href="#features">кто мы</a></li>
+                            <li class="header__nav_item"><a href="#catalog">каталог</a></li>
                         </ul>
                         <span class="header__logo">
                             ЛЕГЕНДА
@@ -33,11 +38,11 @@
                     <div class="welcome__content_block d-flex f-dir-column al-center">
                         <h1 class="welcome__title">Открытие продаж в ЖК Легенда</h1>
                         <p class="welcome__text">Легендарный жилой квартал для легендарных личностей</p>
-                        <button class="page-button white-button">Отдел продаж</button>
+                        <button class="page-button white-button order-trigger">оставить заявку</button>
                     </div>
                 </div>
             </section>
-            <section class="features">
+            <section id="features" class="features">
                 <div class="wide-container container white-block block-radius">
                     <div class="features__top d-flex j-content-between">
                         <div class="features__left">
@@ -50,12 +55,12 @@
                             </div>
                             <div class="features__left_bottom d-flex j-content-between">
                                 <div class="features__count d-flex f-dir-column">
-                                    <span class="features__count_digit">17</span>
+                                    <span class="features__count_digit counter-effect" data-count="17">0</span>
                                     <p class="features__count_text">домов в жилом доме</p>
-                                    <button class="page-button unfilled-button">выбрать квартиру</button>
+                                    <button class="page-button unfilled-button order-trigger">выбрать квартиру</button>
                                 </div>
                                 <div class="features__count d-flex f-dir-column">
-                                    <span class="features__count_digit">486</span>
+                                    <span class="features__count_digit counter-effect" data-count="486">0</span>
                                     <p class="features__count_text">квартир доступно к покупке</p>
                                     <div class="features__circles d-flex">
                                         <div class="feature__circle"></div>
@@ -82,7 +87,7 @@
                 </div>
             </section>
         </div>
-        <section class="catalog container">
+        <section id="catalog" class="catalog container">
             <div class="catalog__top d-flex al-center f-dir-column">
                 <h2 class="catalog__title section__title">
                     Выберите планировку
@@ -102,7 +107,7 @@
                     <p class="catalog__product_text">
                         Краткое описание этой прекрасной квартивы в две строчки
                     </p>
-                    <button class="page-button unfilled-button">выбрать квартиру</button>
+                    <button class="page-button unfilled-button order-trigger">выбрать квартиру</button>
                 </div>
                 <div class="catalog__product">
                     <div class="catalog__product_img">
@@ -114,7 +119,7 @@
                     <p class="catalog__product_text">
                         Краткое описание этой прекрасной квартивы в две строчки
                     </p>
-                    <button class="page-button unfilled-button">выбрать квартиру</button>
+                    <button class="page-button unfilled-button order-trigger">выбрать квартиру</button>
                 </div>
                 <div class="catalog__product">
                     <div class="catalog__product_img">
@@ -126,7 +131,7 @@
                     <p class="catalog__product_text">
                         Краткое описание этой прекрасной квартивы в две строчки
                     </p>
-                    <button class="page-button unfilled-button">выбрать квартиру</button>
+                    <button class="page-button unfilled-button order-trigger">выбрать квартиру</button>
                 </div>
                 <div class="catalog__product">
                     <div class="catalog__product_img">
@@ -138,7 +143,7 @@
                     <p class="catalog__product_text">
                         Краткое описание этой прекрасной квартивы в две строчки
                     </p>
-                    <button class="page-button unfilled-button">выбрать квартиру</button>
+                    <button class="page-button unfilled-button order-trigger">выбрать квартиру</button>
                 </div>
                 <div class="catalog__product">
                     <div class="catalog__product_img">
@@ -150,7 +155,7 @@
                     <p class="catalog__product_text">
                         Краткое описание этой прекрасной квартивы в две строчки
                     </p>
-                    <button class="page-button unfilled-button">выбрать квартиру</button>
+                    <button class="page-button unfilled-button order-trigger">выбрать квартиру</button>
                 </div>
                 <div class="catalog__product">
                     <div class="catalog__product_img">
@@ -162,7 +167,7 @@
                     <p class="catalog__product_text">
                         Краткое описание этой прекрасной квартивы в две строчки
                     </p>
-                    <button class="page-button unfilled-button">выбрать квартиру</button>
+                    <button class="page-button unfilled-button order-trigger">выбрать квартиру</button>
                 </div>
             </div>
         </section>
@@ -175,7 +180,7 @@
                     <p class="legendarity__text">
                         Легендарные проценты для таких же легендарных людей.
                     </p>
-                    <button class="page-button unfilled-button">оставить заявку</button>
+                    <button class="page-button unfilled-button order-trigger">оставить заявку</button>
                 </div>
                 <div class="legendarity__info_features d-flex">
                     <div class="features__circles d-flex">
@@ -200,25 +205,29 @@
                 ЛЕГЕНДА
             </span>
             <ul class="header__nav_list d-flex">
-                <li class="header__nav_item"><a href="">квартал</a></li>
-                <li class="header__nav_item"><a href="">инфаструктура</a></li>
+                <li class="header__nav_item"><a href="#features">кто мы</a></li>
+                <li class="header__nav_item"><a href="#catalog">каталог</a></li>
+                <li class="header__nav_item"><a href="#" class="order-trigger">оставить заявку</a></li>
             </ul>
+            <span class="footer__copyright">© 2025. Все права защищены.</span>
         </nav>
     </footer>
     <dialog class="order-modal" id="order-modal">
         <form id="order-modal-form" method="dialog" action="/" class="order-modal__content order-modal-form__content">
             <h2>Оставьте заявку</h2>
             <div class="order-modal__inputs">
-                <label for="">
+                <label for="order-name">
                     <span>Ваше имя</span>
-                    <input class="order-modal__input" type="text" placeholder="Иван">
+                    <input required name="name" id="order-name" class="order-modal__input" type="text"
+                        placeholder="Иван">
                 </label>
-                <label for="">
+                <label for="order-email">
                     <span>Ваш email</span>
-                    <input class="order-modal__input" type="text" placeholder="email@domain.com">
+                    <input required name="email" id="order-email" inputmode="email" class="order-modal__input"
+                        type="email" placeholder="email@domain.com">
                 </label>
             </div>
-            <button class="order-modal-button page-button unfilled-button">оставить заявку</button>
+            <button class="order-modal-button page-button unfilled-button order-tru">оставить заявку</button>
         </form>
     </dialog>
     <dialog class="order-modal" id="order-modal-success">

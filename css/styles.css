@@ -112,6 +112,10 @@ button {
 .header {
     padding-block: 20px;
 }
+.header-mobile__logo {
+    display: none;
+    flex-grow: 1;
+}
 .header__nav_list {
     column-gap: 26px;
 }
@@ -172,6 +176,7 @@ button {
     font-size: 100px;
     color: rgba(1 1 1 / 0.16);
     line-height: 1;
+    min-width: 184px;
 }
 .features__count_text {
     margin-bottom: 1.4em;
@@ -335,13 +340,20 @@ footer {
     margin-top: 80px;
     padding-bottom: 30px;
 }
+.footer__copyright {
+    font-size: 12px;
+    display: none;
+}
+/*order dialog windows*/
 .order-modal {
     padding: 0;
     border: none;
     opacity: 0;
     visibility: hidden;
     border-radius: 24px;
-    transition: .3s visibility, .3s opacity;
+    transition:
+        0.3s visibility,
+        0.3s opacity;
 }
 .order-modal__content {
     padding: 50px;
@@ -379,4 +391,273 @@ footer {
 }
 #order-modal-success .order-modal__content {
     width: 350px;
+}
+
+/*adaptive*/
+
+@media (max-width: 1100px) {
+    .catalog__products {
+        gap: 25px;
+    }
+    .catalog__product {
+        flex-grow: 1;
+        max-width: unset;
+    }
+    .catalog__product_img {
+        height: 250px;
+    }
+}
+@media (max-width: 950px) {
+    h2 {
+        font-size: 22px;
+    }
+    .legendarity__img {
+        max-width: 280px;
+        margin-right: 15px;
+    }
+}
+@media (max-width: 860px) {
+    form label {
+        font-size: 13px;
+    }
+    form input {
+        padding: 15px 18px;
+    }
+    .order-modal-button {
+        font-size: 12px;
+    }
+    .order-modal__content {
+        padding: 40px;
+        width: 400px;
+    }
+    #order-modal-success .order-modal__content {
+        width: 250px;
+    }
+    .features__top {
+        margin-bottom: 90px;
+    }
+    .features__left_top {
+        row-gap: 15px;
+    }
+    .features__img {
+        max-width: 270px;
+    }
+    .features__count_digit {
+        font-size: 80px;
+    }
+    .legendarity__info {
+        row-gap: 75px;
+    }
+    .catalog__product_img {
+        height: 27vw;
+    }
+    .legendarity__img {
+        display: none;
+    }
+    .welcome__content_block {
+        row-gap: 15px;
+    }
+}
+@media (max-width: 750px) {
+    .container {
+        max-width: 650px;
+    }
+    .features__img {
+        display: none;
+    }
+    .features__left {
+        max-width: 100%;
+    }
+    .features__image img {
+        width: 250px;
+    }
+    .features__top {
+        margin-bottom: 60px;
+        padding: 35px 35px 0;
+    }
+    .features__count_digit {
+        min-width: 145px;
+    }
+    .header {
+        background-color: white;
+        position: fixed;
+        left: 0;
+        right: 0;
+        padding-block: 15px;
+        top: 0;
+        color: black;
+        z-index: 20;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .header nav {
+        column-gap: 26px;
+    }
+    .header__logo {
+        order: -1;
+        flex-grow: 1;
+    }
+    main {
+        margin-top: 60px;
+    }
+}
+@media (max-width: 630px) {
+    h1 {
+        font-size: 30px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    .welcome__content_block {
+        max-width: 350px;
+    }
+    .header__nav_item a {
+        font-size: 14px;
+    }
+    .features__left_bottom {
+        margin-top: 15px;
+    }
+    .catalog__product {
+        padding: 23px;
+    }
+    .section__title {
+        margin-bottom: 8px;
+    }
+    p {
+        font-size: 11px;
+    }
+}
+@media (max-width: 524px) {
+    .catalog__product_img {
+        height: 53vw;
+    }
+    .legendarity__info_features {
+        flex-direction: column-reverse;
+        max-width: 350px;
+    }
+}
+@media (max-width: 450px) {
+    .header__logo {
+        font-size: 16px;
+    }
+    .header__nav_item a {
+        font-size: 13px;
+    }
+    .header__nav_list {
+        column-gap: 15px;
+    }
+    .header nav {
+        column-gap: 15px;
+    }
+
+    main {
+        margin-top: 54px;
+    }
+    footer .header__nav_list {
+        display: none;
+    }
+    .footer__copyright .container {
+        align-items: center;
+    }
+    .footer__copyright {
+        display: inline;
+        height: fit-content;
+        align-self: center;
+    }
+    .features__top {
+        padding: 25px 25px 0;
+    }
+    .features__image img {
+        width: 200px;
+    }
+    .white-block {
+        padding: 25px;
+    }
+    .legendarity__info {
+        padding-bottom: 0;
+    }
+    .feature__circle {
+        height: 40px;
+        width: 40px;
+    }
+    .page-button {
+        padding: 15px 25px;
+        font-size: 10px;
+        border-radius: 30px;
+    }
+    h1 {
+        font-size: 27px;
+    }
+    .features__count_digit {
+        font-size: 70px;
+    }
+    .welcome__content_block {
+        max-width: 310px;
+    }
+    .features__bottom .features__title,
+    .features__bottom .features__left_text {
+        padding-inline: 25px;
+    }
+    .order-modal__content {
+        padding: 35px;
+    }
+    .order-modal__content button {
+        border-radius: 6px;
+    }
+    .order-modal__content {
+        width: 340px;
+    }
+    .order-modal__input {
+        padding: 15px 25px;
+    }
+    .order-modal {
+        border-radius: 18px;
+    }
+}
+@media (max-width: 420px) {
+    .legendarity__info {
+        row-gap: 30px;
+    }
+    .legendarity__info_features {
+        display: none;
+    }
+    .features__count_digit {
+        font-size: 55px;
+    }
+    h2 {
+        font-size: 18px;
+    }
+    .page-button:not(.order-modal-button) {
+        padding: 12px 20px;
+        font-size: 9px;
+    }
+    .features__left_bottom {
+        column-gap: 15px;
+    }
+
+    .header .header__logo {
+        display: none;
+    }
+    .header-mobile__logo {
+        display: block;
+    }
+    .header__nav_list {
+        height: fit-content;
+        align-self: center;
+    }
+    .header {
+        padding-block: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    .features__count_text {
+        font-size: 8px;
+    }
+    .order-modal__content {
+        width: 310px;
+        padding: 35px 28px;
+    }
+    .order-modal__input {
+        padding: 15px;
+    }
 }

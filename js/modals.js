@@ -21,17 +21,19 @@ function openDialogModal() {
 function closeDialogModal() {
     this.opened = false
     this.close()
-    this.style.display = "unset"
+    this.style.display = "none"
+}
+
+function openOrderDialog(e) {
+    e.preventDefault()
+    openDialogModal.call(dialogModal)
+    addClickOutsideContentListener()
 }
 
 function initOrderDialogTriggers() {
     if (allOrderTriggers.length) {
         allOrderTriggers.forEach(item => {
-            item.onclick = function (e) {
-                e.preventDefault()
-                openDialogModal.call(dialogModal)
-                addClickOutsideContentListener()
-            }
+            item.onclick = openOrderDialog
         })
     }
 }
@@ -63,4 +65,7 @@ function removeClickOutsideContentListener() {
 
 initOrderDialogTriggers()
 
-orderForm.onsubmit = () => openDialogModal.call(dialogModalSuccess)
+orderForm.onsubmit = () => {
+    openDialogModal.call(dialogModalSuccess)
+    orderForm.reset()
+}
